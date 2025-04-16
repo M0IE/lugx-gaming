@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <title>Lugx Gaming - Login</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.png" alt="" style="width: 158px;">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Tienda</a></li>
+                
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="login.html" id="auth-link">Iniciar Sesión</a></li>
+                <li><span id="username-display" style="color: white;"></span></li>
+
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+                <li><a href="library.html"><i class="fa fa-gamepad"></i> Mi Biblioteca</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Fomulario de inicio</h3>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="tabs-content">
+            <div class="row">
+              <div class="nav-wrapper">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Iniciar sesion</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Registrarse</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                  <div id="login-error" class="alert alert-danger mt-3" style="display: none;"></div>
+                  <form id="login-form" class="mt-4">
+                    <div class="mb-3">
+                      <label for="login-email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="login-email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="login-password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="login-password" required>
+                    </div>
+                    <button type="submit" class="orange-button">Login</button>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                  <div id="register-error" class="alert alert-danger mt-3" style="display: none;"></div>
+                  <div id="register-success" class="alert alert-success mt-3" style="display: none;">Registration successful! You can now login.</div>
+                  <form id="register-form" class="mt-4">
+                    <div class="mb-3">
+                      <label for="register-name" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="register-name" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="register-email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="register-email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="register-password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="register-password" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="register-confirm-password" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="register-confirm-password" required>
+                    </div>
+                    <button type="submit" class="orange-button">Register</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/dbconnection.js"></script>
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username');
+            if (username) {
+                document.getElementById('login-link').textContent = username; // Reemplazar el texto
+            }
+        });
+    </script>
+  
+
+</body>
+</html>

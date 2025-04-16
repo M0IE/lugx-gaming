@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <title>Lugx Gaming - Shop Page</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.png" alt="" style="width: 158px;">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="shop.html">Tienda</a></li>
+
+              <li><a href="contact.html">Contacto</a></li>
+              <li id="login-link"><a href="login.html">Iniciar sesión</a></li>
+              <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+              <li><a href="library.html"><i class="fa fa-gamepad"></i> Mi Biblioteca</a></li>
+
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Nuestra tienda</h3>
+          <span class="breadcrumb"><a href="index.html">Home</a> > Tienda
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section trending">
+    <div class="container">
+      <ul class="trending-filter">
+        <li>
+          <a class="is_active" href="#!" data-filter="*">Show All</a>
+        </li>
+        <li>
+          <a href="#!" data-filter=".adv">Adventure</a>
+        </li>
+        <li>
+          <a href="#!" data-filter=".str">Strategy</a>
+        </li>
+        <li>
+          <a href="#!" data-filter=".rac">Racing</a>
+        </li>
+      </ul>
+      <div class="row trending-box">
+        <div class="row trending-box" id="games-container">
+          <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv" id="trending-game">
+
+            <div class="item" data-id="product1">
+              <div class="thumb">
+                <a href="product-details.html?id=product1">
+                  <img src="assets/images/trending-01.jpg" alt="">
+                </a>
+                <span class="price"><em>$36</em>$24</span>
+              </div>
+              <div class="down-content">
+                <span class="category">Action</span>
+                <h4 class="product-name">Assasin Creed</h4>
+                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 str">
+            <div class="item" data-id="product2">
+              <div class="thumb">
+                <a href="product-details.html?id=product2">
+                  <img src="assets/images/trending-02.jpg" alt="">
+                </a>
+                <span class="price"><em>$32</em>$22</span>
+              </div>
+              <div class="down-content">
+                <span class="category">Strategy</span>
+                <h4 class="product-name">Age of Empires</h4>
+                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv rac" id="additional-game">
+
+            <div class="item" data-id="product3">
+              <div class="thumb">
+                <a href="product-details.html?id=product3">
+                  <img src="assets/images/trending-03.jpg" alt="">
+                </a>
+                <span class="price"><em>$45</em>$30</span>
+              </div>
+              <div class="down-content">
+                <span class="category">Racing</span>
+                <h4 class="product-name">Need for Speed</h4>
+                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 str" id="another-game">
+
+            <div class="item" data-id="product4">
+              <div class="thumb">
+                <a href="product-details.html?id=product4">
+                  <img src="assets/images/trending-04.jpg" alt="">
+                </a>
+                <span class="price"><em>$32</em>$22</span>
+              </div>
+              <div class="down-content">
+                <span class="category">Strategy</span>
+                <h4 class="product-name">Warcraft III</h4>
+                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 rac str">
+            <div class="item" data-id="product5">
+              <div class="thumb">
+                <a href="product-details.html?id=product5">
+                  <img src="assets/images/trending-03.jpg" alt="">
+                </a>
+                <span class="price"><em>$38</em>$26</span>
+              </div>
+              <div class="down-content">
+                <span class="category">Racing</span>
+                <h4 class="product-name">Gran Turismo</h4>
+                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 rac adv">
+            <div class="item" data-id="product6">
+              <div class="thumb">
+                <a href="product-details.html?id=product6">
+                  <img src="assets/images/trending-01.jpg" alt="">
+                </a>
+                <span class="price"><em>$30</em>$20</span>
+              </div>
+              <div class="down-content">
+                <span class="category">Adventure</span>
+                <h4 class="product-name">Tomb Raider</h4>
+                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 rac str">
+            <div class="item" data-id="product7">
+              <div class="thumb">
+                <a href="product-details.html?id=product7">
+                  <img src="assets/images/trending-04.jpg" alt="">
+                </a>
+                <span class="price"><em>$32</em>$22</span>
+              </div>
+              <div class="down-content">
+                <span class="category">Strategy</span>
+                <h4 class="product-name">Command & Conquer</h4>
+                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 rac adv">
+            <div class="item" data-id="product8">
+              <div class="thumb">
+                <a href="product-details.html?id=product8">
+                  <img src="assets/images/trending-02.jpg" alt="">
+                </a>
+                <span class="price"><em>$32</em>$22</span>
+              </div>
+              <div class="down-content">
+                <span class="category">Adventure</span>
+                <h4 class="product-name">Uncharted</h4>
+                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="pagination">
+
+              <li><a href="#">1</a></li>
+              <li><a class="is_active" href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#"> > </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script>
+      function loadGames() {
+        fetch('fetch_games.php')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Error en la red');
+            }
+            return response.json();
+          })
+          .then(data => {
+            const gamesContainer = document.getElementById('games-container');
+            gamesContainer.innerHTML = ''; // Limpiar el contenedor
+
+            if (data.error) {
+              console.error(data.error);
+              return;
+            }
+
+            data.forEach(game => {
+              const gameElement = document.createElement('div');
+              gameElement.className = 'col-lg-3 col-md-6 align-self-center mb-30 trending-items';
+              gameElement.innerHTML = `
+                        <div class="item" data-id="${game.gameId}">
+                            <div class="thumb">
+                                <a href="product-details.html?id=${game.gameId}">
+                                    <img src="${game.image}" alt="${game.name}">
+                                </a>
+                                <span class="price"><em>$${game.price}</em></span>
+                            </div>
+                            <div class="down-content">
+                                <span class="category">${game.category}</span>
+                                <h4 class="product-name">${game.name}</h4>
+                                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+                            </div>
+                        </div>
+                    `;
+              gamesContainer.appendChild(gameElement);
+            });
+          })
+          .catch(error => console.error('Error al cargar los juegos:', error));
+      }
+
+      document.addEventListener('DOMContentLoaded', loadGames);
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const username = localStorage.getItem('username');
+        if (username) {
+          const loginLink = document.getElementById('login-link');
+          loginLink.innerHTML = `<a href="account.html" class="nav-link" style="color: #0071f8; ">${username}</a>`; // Reemplazar el texto y agregar el enlace
+        }
+      });
+
+    </script>
+
+</body>
+
+</html>

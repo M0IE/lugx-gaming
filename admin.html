@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - LUGX Gaming</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/admin.css">
+    
+    <script src="assets/js/admint.js" defer></script>
+</head>
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <div class="admin-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/logo.png" alt="LUGX Gaming" class="sidebar-logo">
+                <button id="sidebar-close" class="sidebar-close d-lg-none">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="admin-profile">
+                <img src="assets/images/admin-avatar.jpg" alt="Admin" class="admin-avatar">
+                <div class="admin-info">
+                    <h5>Admin Principal</h5>
+                    <span class="admin-role">Administrador</span>
+                </div>
+            </div>
+
+            <div class="sidebar-menu-container">
+                <ul class="sidebar-menu">
+                    <li class="menu-header">MENÚ PRINCIPAL</li>
+                    <li class="menu-item active" data-tab="dashboard-tab">
+                        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li class="menu-item" data-tab="games-tab">
+                        <a href="#"><i class="fas fa-gamepad"></i> Juegos</a>
+                    </li>
+                    <li class="menu-item" data-tab="users-tab">
+                        <a href="#"><i class="fas fa-users"></i> Usuarios</a>
+                    </li>
+                    <li class="menu-item" data-tab="orders-tab">
+                        <a href="#"><i class="fas fa-shopping-cart"></i> Pedidos</a>
+                    </li>
+                    <li class="menu-header">CONFIGURACIÓN</li>
+                    <li class="menu-item" data-tab="settings-tab">
+                        <a href="#"><i class="fas fa-cog"></i> Ajustes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="admin-main">
+            <!-- Top Navbar -->
+            <div class="admin-navbar">
+                <div class="navbar-left">
+                    <button id="sidebar-toggle" class="sidebar-toggle d-lg-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="navbar-right">
+                    <div class="navbar-item">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">
+                                <h6>Notificaciones</h6>
+                                <a href="#">Marcar todo como leído</a>
+                            </div>
+                            <div class="notification-list">
+                                <!-- Las notificaciones se cargarán dinámicamente -->
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#">Ver todas las notificaciones</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item">
+                        <button class="message-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span class="badge">2</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">
+                                <h6>Mensajes</h6>
+                                <a href="#">Marcar todo como leído</a>
+                            </div>
+                            <div class="message-list">
+                                <!-- Los mensajes se cargarán dinámicamente -->
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#">Ver todos los mensajes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item">
+                        <div class="user-dropdown">
+                            <button class="user-dropdown-toggle">
+                                <img src="assets/images/admin-avatar.jpg" alt="Admin" class="user-avatar">
+                                <span class="user-name">Admin</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="user-dropdown-menu">
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-user"></i> Mi Perfil
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-cog"></i> Configuración
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="admin-content">
+                <!-- Dashboard Tab -->
+                <div class="content-tab active" id="dashboard-tab">
+                    <div class="content-header">
+                        <div class="content-title">
+                            <h1>Dashboard</h1>
+                            <p>Resumen general del sistema</p>
+                        </div>
+                        <div class="content-actions">
+                            <div class="date-filter">
+                                <select class="form-select">
+                                    <option>Últimos 7 días</option>
+                                    <option>Último mes</option>
+                                    <option>Último año</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i> Exportar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="stats-card">
+                                <div class="stats-icon bg-primary">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="stats-info">
+                                    <h3 id="total-games">0</h3>
+                                    <p>Total Juegos</p>
+                                </div>
+                                <div class="stats-trend up">
+                                    <i class="fas fa-arrow-up"></i> 12%
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="stats-card">
+                                <div class="stats-icon bg-success">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stats-info">
+                                    <h3 id="total-users">0</h3>
+                                    <p>Total Usuarios</p>
+                                </div>
+                                <div class="stats-trend up">
+                                    <i class="fas fa-arrow-up"></i> 8%
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="stats-card">
+                                <div class="stats-icon bg-warning">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="stats-info">
+                                    <h3 id="total-orders">0</h3>
+                                    <p>Total Pedidos</p>
+                                </div>
+                                <div class="stats-trend down">
+                                    <i class="fas fa-arrow-down"></i> 3%
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="stats-card">
+                                <div class="stats-icon bg-danger">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="stats-info">
+                                    <h3 id="total-sales">$0</h3>
+                                    <p>Total Ventas</p>
+                                </div>
+                                <div class="stats-trend up">
+                                    <i class="fas fa-arrow-up"></i> 15%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 col-lg-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Ventas Mensuales</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="sales-chart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Juegos Más Vendidos</h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="top-games-chart" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mt-4">
+                        <div class="col-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Últimos Pedidos</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Usuario</th>
+                                                    <th>Fecha</th>
+                                                    <th>Total</th>
+                                                    <th>Estado</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="recent-orders">
+                                                <!-- Los pedidos se cargarán dinámicamente -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Actividad Reciente</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div id="activity-list" class="activity-list">
+                                        <!-- Las actividades se cargarán dinámicamente -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Games Tab -->
+                <div class="content-tab" id="games-tab">
+                    <div class="content-header">
+                        <div class="content-title">
+                            <h1>Gestión de Juegos</h1>
+                            <p>Administra el catálogo de juegos</p>
+                        </div>
+                        <div class="content-actions">
+                            <button id="add-game-btn" class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Añadir Juego
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody id="games-table-body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users Tab -->
+                <div class="content-tab" id="users-tab">
+                    <div class="content-header">
+                        <div class="content-title">
+                            <h1>Gestión de Usuarios</h1>
+                            <p>Administra los usuarios del sistema</p>
+                        </div>
+                        <div class="content-actions">
+                            <button id="add-user-btn" class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Añadir Usuario
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody id="users-table-body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders Tab -->
+                <div class="content-tab" id="orders-tab">
+                    <div class="content-header">
+                        <div class="content-title">
+                            <h1>Gestión de Pedidos</h1>
+                            <p>Administra los pedidos realizados</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Usuario</th>
+                                            <th>Fecha</th>
+                                            <th>Total</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="orders-table-body">
+                                        <!-- Los pedidos se cargarán dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div class="content-tab" id="settings-tab">
+                    <div class="content-header">
+                        <div class="content-title">
+                            <h1>Ajustes</h1>
+                            <p>Configura las opciones del sistema</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="settings-form">
+                                <div class="mb-3">
+                                    <label for="site-name" class="form-label">Nombre del Sitio</label>
+                                    <input type="text" class="form-control" id="site-name" name="site_name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="admin-email" class="form-label">Email del Administrador</label>
+                                    <input type="email" class="form-control" id="admin-email" name="admin_email">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales -->
+    <!-- Modal para Juegos -->
+    <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gameModalLabel">Añadir/Editar Juego</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="game-form">
+                        <input type="hidden" id="game-id" name="id">
+                        <div class="mb-3">
+                            <label for="game-name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="game-name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="game-price" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="game-price" name="price" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="game-original-price" class="form-label">Precio Original</label>
+                            <input type="number" class="form-control" id="game-original-price" name="original_price" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="game-category" class="form-label">Categoría</label>
+                            <input type="text" class="form-control" id="game-category" name="category" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="game-description" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="game-description" name="description" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="game-code" class="form-label">Código</label>
+                            <input type="text" class="form-control" id="game-code" name="code" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="game-file-size" class="form-label">Tamaño del Archivo</label>
+                            <input type="text" class="form-control" id="game-file-size" name="file_size" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="game-image" class="form-label">Imagen</label>
+                            <input type="file" class="form-control" id="game-image" name="image">
+                            <div id="game-image-preview" class="mt-2"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Usuarios -->
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">Añadir/Editar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="user-form">
+                        <input type="hidden" id="user-id" name="id">
+                        <div class="mb-3">
+                            <label for="user-name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="user-name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="user-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="user-email" name="email" required>
+                        </div>
+                        <div class="mb-3" id="password-field">
+                            <label for="user-password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="user-password" name="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="user-role" class="form-label">Rol</label>
+                            <select class="form-select" id="user-role" name="role" required>
+                                <option value="admin">Administrador</option>
+                                <option value="user">Usuario</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Pedidos -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Detalles del Pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="order-details"></div>
+                    <div class="mb-3">
+                        <label for="order-status" class="form-label">Estado del Pedido</label>
+                        <select class="form-select" id="order-status" name="status">
+                            <option value="pending">Pendiente</option>
+                            <option value="processing">En Proceso</option>
+                            <option value="completed">Completado</option>
+                            <option value="cancelled">Cancelado</option>
+                        </select>
+                    </div>
+                    <input type="hidden" id="current-order-id">
+                    <button id="update-order-status" class="btn btn-primary">Actualizar Estado</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>

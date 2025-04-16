@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <title>Lugx</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.png" alt="" style="width: 158px;">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="shop.html">Tienda</a></li>
+
+              <li><a href="contact.html">Contacto</a></li>
+              <li id="login-link"><a href="login.html">Iniciar sesión</a></li>
+              <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+              <li><a href="library.html"><i class="fa fa-gamepad"></i> Mi Biblioteca</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="caption header-text">
+            <h6>Lugx</h6>
+            <h2>La para de lo juego</h2>
+            <p>e</p>
+            <div class="search-input">
+              <form id="search" action="#">
+                <input type="text" placeholder="Que te interesa?" id='searchText' name="searchKeyword"
+                  onkeypress="handle" />
+                <button role="button">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-2">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="assets/images/featured-01.png" alt="" style="max-width: 44px;">
+              </div>
+              <h4>Almacenamiento Gratis</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="assets/images/featured-02.png" alt="" style="max-width: 44px;">
+              </div>
+              <h4>Usuario</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="assets/images/featured-03.png" alt="" style="max-width: 44px;">
+              </div>
+              <h4>Entrega Gratis</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="assets/images/featured-04.png" alt="" style="max-width: 44px;">
+              </div>
+              <h4>Interfaz facil</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section trending">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>Tendencias</h6>
+            <h2>Juego populares</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-button">
+            <a href="shop.html">Ver todos</a>
+          </div>
+        </div>
+        <div class="row" id="trending-games">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section most-played">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>Juegos TOP</h6>
+            <h2>Mas jugados</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-button">
+            <a href="shop.html">Ver Todos</a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html?id=game1"><img src="assets/images/top-game-01.jpg" alt=""></a>
+            </div>
+            <div class="down-content">
+              <span class="category">Adventure</span>
+              <h4 class="product-name">Assasin Creed</h4>
+
+              <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html?id=game2"><img src="assets/images/top-game-02.jpg" alt=""></a>
+            </div>
+            <div class="down-content">
+              <span class="category">Adventure</span>
+              <h4 class="product-name">Assasin Creed</h4>
+
+              <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html?id=game3"><img src="assets/images/top-game-03.jpg" alt=""></a>
+            </div>
+            <div class="down-content">
+              <span class="category">Adventure</span>
+              <h4 class="product-name">Assasin Creed</h4>
+
+              <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html?id=game4"><img src="assets/images/top-game-04.jpg" alt=""></a>
+            </div>
+            <div class="down-content">
+              <span class="category">Adventure</span>
+              <h4 class="product-name">Assasin Creed</h4>
+
+              <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html?id=game5"><img src="assets/images/top-game-05.jpg" alt=""></a>
+            </div>
+            <div class="down-content">
+              <span class="category">Adventure</span>
+              <h4 class="product-name">Assasin Creed</h4>
+
+              <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="item">
+            <div class="thumb">
+              <a href="product-details.html?id=game6"><img src="assets/images/top-game-06.jpg" alt=""></a>
+            </div>
+            <div class="down-content">
+              <span class="category">Adventure</span>
+              <h4 class="product-name">Assasin Creed</h4>
+
+              <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Categorias</h6>
+            <h2>Top Categorias</h2>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Accion</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-01.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Action</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Shooters</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-03.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Aventuras</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-04.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Multi jugador</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="shop">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Tienda</h6>
+                  <h2>Los Mejores <em>Precios</em> Para ti</h2>
+                </div>
+                <p>Lorem ipsum dolor consectetur adipiscing, sed do eiusmod tempor incididunt.</p>
+                <div class="main-button">
+                  <a href="shop.html">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-2 align-self-end">
+          <div class="subscribe">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Cupones</h6>
+                  <h2>Comsigue descuentos de hasta 80% <em>Subscribete </em> </h2>
+                </div>
+                <div class="search-input">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/library.js"></script>
+  <script src="assets/js/product-details.js"></script>
+  <script>
+    function loadGames() {
+      fetch('fetch_games.php')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error en la red');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const trendingContainer = document.getElementById('trending-games');
+
+          trendingContainer.innerHTML = '';
+
+          if (data.error) {
+            console.error(data.error);
+            return;
+          }
+
+          data.forEach(game => {
+            const gameElement = document.createElement('div');
+            gameElement.className = 'col-lg-3 col-md-6 align-self-center mb-30 trending-items';
+            gameElement.innerHTML = `
+                        <div class="item" data-id="${game.gameId}">
+                            <div class="thumb">
+                                <a href="product-details.html?id=${game.gameId}">
+                                    <img src="${game.image}" alt="${game.name}">
+                                </a>
+                                <span class="price"><em>$${game.price}</em></span>
+                            </div>
+                            <div class="down-content">
+                                <span class="category">${game.category}</span>
+                                <h4 class="product-name">${game.name}</h4>
+                                <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-bag"></i></a>
+                            </div>
+                        </div>
+                    `;
+            trendingContainer.appendChild(gameElement);
+          });
+        })
+        .catch(error => console.error('Error al cargar los juegos:', error));
+    }
+
+    document.addEventListener('DOMContentLoaded', loadGames);
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const username = localStorage.getItem('username');
+      if (username) {
+        const loginLink = document.getElementById('login-link');
+        loginLink.innerHTML = `<a href="account.html" class="nav-link" style="color: #0071f8;">${username}</a>`; // Reemplazar el texto y agregar el enlace
+      }
+    });
+
+
+  </script>
+
+</body>
+
+</html>
